@@ -68,7 +68,9 @@ int is_clean(char* str) {
   // greater than the second.
   result = strcmp(str, cleaned);
 
-  free(cleaned);
+ if ( str[0] != '\0' ) {
+	 free(cleaned);
+ }
   return result == 0;
 }
 
